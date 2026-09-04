@@ -1,0 +1,1587 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Paradigm Traders | Institutional Forex Education & Live Signals</title>
+  <meta name="description" content="Master the financial markets with elite precision. Professional Forex education, real-time institutional trade signals, and live execution rooms.">
+  <link rel="icon" type="image/png" href="assets/logo.png">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#26D9B1",
+            "primary-hover": "#1fc29d",
+            "background-light": "#ffffff",
+            "background-dark": "#0c1011",
+            "card-dark": "#121819",
+            "accent-purple": "#8A2BE2",
+            "accent-purple-light": "#a855f7"
+          },
+          fontFamily: {
+            sans: ["Inter", "sans-serif"],
+            mono: ["JetBrains Mono", "monospace"]
+          }
+        },
+      },
+    };
+  </script>
+</head>
+<body class="bg-[#080c0d] text-gray-100 font-sans antialiased min-h-screen flex flex-col selection:bg-primary selection:text-black">
+
+  <!-- =========================================================================
+       FIXED HEADER / GLASS NAV
+       ========================================================================= -->
+  <header class="fixed w-full top-0 z-50 glass-nav transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        
+        <!-- Brand Logo & Title -->
+        <a href="#home" onclick="switchView('home')" class="flex items-center space-x-3 group">
+          <div class="relative">
+            <img alt="Paradigm Traders Logo" class="h-11 w-11 rounded-full object-cover border border-teal-500/40 shadow-[0_0_15px_rgba(38,217,177,0.3)] group-hover:scale-105 transition-transform" src="assets/logo.png">
+            <span class="absolute bottom-0 right-0 w-3 h-3 bg-primary rounded-full border-2 border-[#080c0d] pulse-dot"></span>
+          </div>
+          <div class="flex flex-col">
+            <span class="text-xl font-extrabold tracking-wider text-white group-hover:text-primary transition-colors flex items-center gap-1.5">
+              PARADIGM <span class="text-xs font-semibold px-1.5 py-0.5 rounded bg-primary/10 text-primary border border-primary/20">TRADERS</span>
+            </span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden md:flex items-center space-x-8">
+          <a class="nav-link text-sm font-medium text-gray-300 hover:text-primary transition-colors" data-target="home" href="#home">Home</a>
+          <a class="nav-link text-sm font-medium text-gray-400 hover:text-primary transition-colors" data-target="courses" href="#courses">Courses</a>
+          <a class="nav-link text-sm font-medium text-gray-400 hover:text-primary transition-colors" data-target="dashboard" href="#dashboard">Dashboard</a>
+          <a class="nav-link text-sm font-medium text-gray-400 hover:text-primary transition-colors" data-target="signals" href="#signals">Signals</a>
+          <a class="nav-link text-sm font-medium text-gray-400 hover:text-primary transition-colors" data-target="pricing" href="#pricing">Pricing</a>
+          <a class="nav-link text-sm font-medium text-gray-400 hover:text-primary transition-colors" data-target="mentors" href="#mentors">Mentors</a>
+        </nav>
+
+        <!-- Right User Actions (Top Right Side) -->
+        <div class="hidden md:flex items-center space-x-3">
+          
+          <!-- WhatsApp VIP Group Link -->
+          <a href="https://chat.whatsapp.com/GDw1o17UF9VFSYQxqpvIKn" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 text-xs font-bold transition-all shadow-[0_0_12px_rgba(16,185,129,0.2)] group" title="Join Official WhatsApp Group">
+            <svg class="w-4 h-4 fill-current text-emerald-400 group-hover:scale-110 transition-transform" viewBox="0 0 24 24">
+              <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 012.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 01-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.44.12-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.44.06-.66.31-.23.25-.88.86-.88 2.1s.9 2.43 1.03 2.6c.12.17 1.77 2.7 4.28 3.79.6.26 1.07.41 1.43.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.07-.12-.23-.19-.48-.31z"/>
+            </svg>
+            <span>WhatsApp Group</span>
+          </a>
+
+          <!-- Dark / Light Mode Button -->
+          <button id="theme-toggle-btn" onclick="toggleTheme()" class="p-2 rounded-lg bg-gray-800/80 hover:bg-gray-700 text-gray-300 hover:text-white transition-colors border border-gray-700/80 flex items-center justify-center" title="Toggle Dark / Light Mode" aria-label="Toggle Theme">
+            <svg id="theme-moon-icon" class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+            </svg>
+            <svg id="theme-sun-icon" class="w-4 h-4 text-amber-400 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+            </svg>
+          </button>
+
+          <!-- Settings Button (Top Right Side) -->
+          <button id="settings-open-btn" onclick="openSettingsModal()" class="p-2 rounded-lg bg-gray-800/80 hover:bg-gray-700 text-gray-300 hover:text-white transition-colors border border-gray-700/80 flex items-center justify-center group" title="Terminal Settings" aria-label="Open Settings">
+            <svg class="w-4 h-4 group-hover:rotate-45 transition-transform text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+            </svg>
+          </button>
+
+          <button onclick="openAuthModal('login')" class="text-gray-300 hover:text-white font-semibold text-xs px-2.5 py-2 transition-colors">
+            Log In
+          </button>
+          <button onclick="switchView('dashboard')" class="bg-primary hover:bg-teal-400 text-[#090d0e] px-4 py-2 rounded-lg font-bold text-xs tracking-wide transition-all shadow-[0_0_20px_rgba(38,217,177,0.35)] hover:shadow-[0_0_25px_rgba(38,217,177,0.6)] flex items-center gap-1.5">
+            <span>Portal</span>
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
+          </button>
+        </div>
+
+        <!-- Mobile Header Actions (Top Right) -->
+        <div class="md:hidden flex items-center space-x-2">
+          <!-- WhatsApp Mobile -->
+          <a href="https://chat.whatsapp.com/GDw1o17UF9VFSYQxqpvIKn" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 012.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 01-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.44.12-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.44.06-.66.31-.23.25-.88.86-.88 2.1s.9 2.43 1.03 2.6c.12.17 1.77 2.7 4.28 3.79.6.26 1.07.41 1.43.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.07-.12-.23-.19-.48-.31z"/></svg>
+          </a>
+          <!-- Theme Toggle Mobile -->
+          <button onclick="toggleTheme()" class="p-2 rounded-lg bg-gray-800 text-gray-300 border border-gray-700">
+            <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+          </button>
+          <!-- Settings Mobile -->
+          <button onclick="openSettingsModal()" class="p-2 rounded-lg bg-gray-800 text-gray-300 border border-gray-700">
+            <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path></svg>
+          </button>
+          <button id="mobile-menu-btn" class="p-2 text-gray-400 hover:text-white focus:outline-none rounded-lg bg-gray-800/60" aria-label="Toggle menu">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div id="mobile-drawer" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-xl hidden md:hidden flex flex-col justify-between p-6">
+    <div>
+      <div class="flex items-center justify-between pb-6 border-b border-gray-800">
+        <div class="flex items-center space-x-3">
+          <img src="assets/logo.png" class="h-9 w-9 rounded-full" alt="Logo">
+          <span class="font-extrabold text-white text-lg">PARADIGM TRADERS</span>
+        </div>
+        <button id="mobile-drawer-close" class="p-2 text-gray-400 hover:text-white">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+      </div>
+
+      <nav class="flex flex-col space-y-4 mt-8">
+        <a class="nav-link text-lg font-bold text-gray-300 hover:text-primary py-2" data-target="home" href="#home">Home</a>
+        <a class="nav-link text-lg font-bold text-gray-300 hover:text-primary py-2" data-target="courses" href="#courses">Courses</a>
+        <a class="nav-link text-lg font-bold text-gray-300 hover:text-primary py-2" data-target="dashboard" href="#dashboard">Trader Dashboard</a>
+        <a class="nav-link text-lg font-bold text-gray-300 hover:text-primary py-2" data-target="signals" href="#signals">Live Signals</a>
+        <a class="nav-link text-lg font-bold text-gray-300 hover:text-primary py-2" data-target="pricing" href="#pricing">Pricing & Memberships</a>
+        <a class="nav-link text-lg font-bold text-gray-300 hover:text-primary py-2" data-target="mentors" href="#mentors">Our Mentors</a>
+      </nav>
+    </div>
+
+    <div class="pt-6 border-t border-gray-800 space-y-3">
+      <button onclick="closeMobileMenu(); openAuthModal('login')" class="w-full py-3 rounded-lg border border-gray-700 font-semibold text-gray-300 text-sm">
+        Log In
+      </button>
+      <button onclick="closeMobileMenu(); switchView('dashboard')" class="w-full py-3 rounded-lg bg-primary font-bold text-background-dark text-sm">
+        Launch Dashboard
+      </button>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       MAIN CONTENT CONTAINER
+       ========================================================================= -->
+  <main class="flex-grow pt-20">
+
+    <!-- =======================================================================
+         VIEW 1: HOME / LANDING (Matching web pic 1 & screen.png)
+         ======================================================================= -->
+    <div id="view-home" class="app-view block">
+      
+      <!-- Hero Section -->
+      <section class="relative overflow-hidden pt-16 pb-24 lg:pt-24 lg:pb-32">
+        <!-- Radial Glowing Orb Behind Logo -->
+        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[650px] md:w-[850px] h-[650px] md:h-[850px] bg-radial-halo opacity-60 blur-3xl pointer-events-none"></div>
+        <div class="absolute inset-0 bg-grid-pattern opacity-10 pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div class="text-center max-w-4xl mx-auto">
+            
+            <!-- Hero Bull Logo with Cyan Glow -->
+            <div class="mb-6 flex justify-center">
+              <div class="relative group">
+                <div class="absolute -inset-2 bg-gradient-to-r from-primary via-accent-purple to-teal-400 rounded-full blur-xl opacity-60 group-hover:opacity-85 transition duration-1000 group-hover:duration-200 animate-pulse-glow"></div>
+                <img alt="Paradigm Traders Bull Logo" class="relative h-44 md:h-56 w-44 md:w-56 rounded-full object-cover border-2 border-primary/60 shadow-[0_0_50px_rgba(38,217,177,0.45)]" src="assets/logo.png">
+              </div>
+            </div>
+
+            <!-- Enrollment Open Pill -->
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-accent-purple/20 border border-accent-purple/40 text-purple-300 text-xs font-bold uppercase tracking-widest mb-6 backdrop-blur-md shadow-[0_0_15px_rgba(138,43,226,0.3)]">
+              <span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+              <span>Enrollment Open for Q3</span>
+            </div>
+
+            <!-- Hero Headline -->
+            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight leading-[1.1] mb-6 text-white">
+              Master the Markets with<br>
+              <span class="text-gradient">Elite Precision.</span>
+            </h1>
+
+            <!-- Hero Subtitle -->
+            <p class="text-lg md:text-xl text-gray-400 mb-10 max-w-2xl mx-auto leading-relaxed">
+              Professional Forex education and real-time trade signals curated by institutional-grade traders. Elevate your strategy from amateur to algorithmic.
+            </p>
+
+            <!-- Dual CTAs -->
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 mb-12">
+              <button onclick="switchView('courses')" class="w-full sm:w-auto px-8 py-4 bg-primary hover:bg-teal-400 text-background-dark font-black rounded-xl transition-all btn-primary-glow flex items-center justify-center gap-2 text-base">
+                <span>Start Your Journey</span>
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+              </button>
+              
+              <button onclick="openTourModal()" class="w-full sm:w-auto px-8 py-4 glass-card border border-gray-700 hover:border-primary/50 text-white font-bold rounded-xl transition-colors flex items-center justify-center gap-2 text-base hover:bg-gray-800/60">
+                <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
+                <span>Watch Platform Tour</span>
+              </button>
+            </div>
+
+            <!-- Social Proof & Rating -->
+            <div class="flex items-center justify-center gap-3">
+              <div class="flex -space-x-2">
+                <span class="inline-block h-8 w-8 rounded-full ring-2 ring-[#080c0d] bg-gradient-to-tr from-teal-500 to-emerald-400 text-black text-xs font-bold flex items-center justify-center">JD</span>
+                <span class="inline-block h-8 w-8 rounded-full ring-2 ring-[#080c0d] bg-gradient-to-tr from-purple-500 to-indigo-500 text-white text-xs font-bold flex items-center justify-center">MK</span>
+                <span class="inline-block h-8 w-8 rounded-full ring-2 ring-[#080c0d] bg-gradient-to-tr from-blue-500 to-cyan-500 text-white text-xs font-bold flex items-center justify-center">SA</span>
+              </div>
+              <div class="flex items-center gap-1 text-sm font-semibold text-gray-300">
+                <span class="text-amber-400">★</span>
+                <span class="text-white font-bold">4.9/5</span>
+                <span class="text-gray-400">Student Rating</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- The Paradigm Advantage Section -->
+      <section class="py-24 relative border-t border-gray-800/80 bg-[#090e0f]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-5xl font-black mb-4 text-white">
+              The Paradigm <span class="text-primary">Advantage</span>
+            </h2>
+            <p class="text-gray-400 max-w-2xl mx-auto text-base sm:text-lg">
+              Stop guessing. Start executing with systems designed for consistent alpha generation.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            <!-- Advantage Card 1 -->
+            <div class="glass-card p-8 rounded-2xl relative overflow-hidden group hover:-translate-y-2 transition-all duration-300 border border-gray-800 hover:border-primary/50">
+              <div class="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-bl-full -z-10 group-hover:bg-primary/20 transition-colors"></div>
+              <div class="w-14 h-14 bg-gray-900/90 rounded-xl flex items-center justify-center mb-6 text-primary border border-gray-800 shadow-lg group-hover:border-primary/40">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-3 group-hover:text-primary transition-colors">Institutional Strategy</h3>
+              <p class="text-gray-400 text-sm leading-relaxed">
+                Learn price action, liquidity concepts, and smart money concepts used by top-tier prop firms. Move beyond retail lagging indicators.
+              </p>
+            </div>
+
+            <!-- Advantage Card 2 -->
+            <div class="glass-card p-8 rounded-2xl relative overflow-hidden group hover:-translate-y-2 transition-all duration-300 border border-accent-purple/40 shadow-[0_0_30px_rgba(138,43,226,0.15)]">
+              <div class="absolute inset-0 bg-gradient-to-br from-accent-purple/10 to-transparent -z-10"></div>
+              <div class="w-14 h-14 bg-gray-900/90 rounded-xl flex items-center justify-center mb-6 text-accent-purple-light border border-gray-800 shadow-lg group-hover:border-accent-purple/50">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-3 group-hover:text-accent-purple-light transition-colors">Live Trading Sessions</h3>
+              <p class="text-gray-400 text-sm leading-relaxed">
+                Watch our mentors execute trades live during London and New York sessions. See theory applied to real market conditions with zero hindsight.
+              </p>
+            </div>
+
+            <!-- Advantage Card 3 -->
+            <div class="glass-card p-8 rounded-2xl relative overflow-hidden group hover:-translate-y-2 transition-all duration-300 border border-gray-800 hover:border-primary/50">
+              <div class="absolute bottom-0 right-0 w-full h-1 bg-gradient-to-r from-transparent via-primary to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              <div class="w-14 h-14 bg-gray-900/90 rounded-xl flex items-center justify-center mb-6 text-primary border border-gray-800 shadow-lg group-hover:border-primary/40">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"></path></svg>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-3 group-hover:text-primary transition-colors">24/7 Community Support</h3>
+              <p class="text-gray-400 text-sm leading-relaxed">
+                Join a global network of dedicated traders. Get chart markups reviewed, ask questions, and collaborate around the clock with funded traders.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Built for Next Generation Section -->
+      <section class="py-24 relative border-t border-gray-800/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-5xl font-black mb-4">
+              Built for the <span class="text-primary">Next Generation</span>
+            </h2>
+            <p class="text-gray-400 max-w-2xl mx-auto text-base">
+              Experience unparalleled performance with our cutting-edge trading infrastructure.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="glass-card p-8 rounded-2xl border border-gray-800">
+              <div class="w-12 h-12 bg-teal-500/10 text-primary rounded-xl flex items-center justify-center mb-5 border border-teal-500/30">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path></svg>
+              </div>
+              <h4 class="text-lg font-bold text-white mb-2">AI-Powered Analytics</h4>
+              <p class="text-gray-400 text-sm leading-relaxed">
+                Leverage machine learning algorithms to identify patterns, sweep zones, and optimize your trading strategy in real-time.
+              </p>
+            </div>
+
+            <div class="glass-card p-8 rounded-2xl border border-gray-800">
+              <div class="w-12 h-12 bg-purple-500/10 text-accent-purple-light rounded-xl flex items-center justify-center mb-5 border border-purple-500/30">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+              </div>
+              <h4 class="text-lg font-bold text-white mb-2">Institutional Liquidity</h4>
+              <p class="text-gray-400 text-sm leading-relaxed">
+                Access deep liquidity pools ensuring minimal slippage and optimal execution on large volume trades across global pairs.
+              </p>
+            </div>
+
+            <div class="glass-card p-8 rounded-2xl border border-gray-800">
+              <div class="w-12 h-12 bg-emerald-500/10 text-emerald-400 rounded-xl flex items-center justify-center mb-5 border border-emerald-500/30">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+              </div>
+              <h4 class="text-lg font-bold text-white mb-2">Military-Grade Security</h4>
+              <p class="text-gray-400 text-sm leading-relaxed">
+                Your assets and signals are protected by end-to-end encryption, multi-party computation, and redundant zero-trust infrastructure.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Supported Platforms Bar -->
+      <section class="py-14 border-y border-gray-800/80 bg-[#070b0c]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p class="text-center text-xs font-bold uppercase tracking-widest text-gray-400 mb-8">
+            Trusted By Traders Using Elite Platforms
+          </p>
+          <div class="flex flex-wrap items-center justify-center gap-8 md:gap-16 opacity-70 hover:opacity-100 transition-opacity">
+            <div class="flex items-center gap-2 text-gray-300 font-bold tracking-wider text-sm">
+              <span class="text-primary font-mono text-lg font-black">MT</span> MetaTrader 4/5
+            </div>
+            <div class="flex items-center gap-2 text-gray-300 font-bold tracking-wider text-sm">
+              <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 24 24"><path d="M3.5 18.5l6-6 4 4L22 6.5l-1.5-1.5-7 7-4-4-7.5 7.5z"/></svg> TradingView
+            </div>
+            <div class="flex items-center gap-2 text-gray-300 font-bold tracking-wider text-sm">
+              <span class="text-accent-purple font-mono text-lg font-black">cT</span> cTrader
+            </div>
+            <div class="flex items-center gap-2 text-gray-300 font-bold tracking-wider text-sm">
+              <span class="text-emerald-400 font-mono text-lg font-black">NT</span> NinjaTrader
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Our Mentors Section (Matching screen.png with blank avatars) -->
+      <section class="py-24 relative border-t border-gray-800/80 bg-[#080d0e]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-5xl font-black mb-4 text-white">
+              Our <span class="text-primary">Mentors</span>
+            </h2>
+            <p class="text-gray-400 max-w-2xl mx-auto text-base">
+              Guided by industry veterans with decades of combined experience in global financial markets.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Mentor 1 -->
+            <div class="glass-card p-8 rounded-2xl text-center border border-gray-800 hover:border-primary/30 transition-all group">
+              <div class="w-24 h-24 bg-gray-800/90 rounded-full mx-auto mb-6 flex items-center justify-center border border-gray-700 shadow-inner group-hover:border-primary/40 transition-colors">
+                <svg class="w-12 h-12 text-primary/80 group-hover:text-primary transition-colors" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-2">Ammar Burney</h3>
+              <p class="text-primary text-sm font-medium mb-3">Senior Market Strategist</p>
+              <p class="text-gray-400 text-sm leading-relaxed">
+                Expert in algorithmic trading and macro-economic analysis.
+              </p>
+            </div>
+
+            <!-- Mentor 2 -->
+            <div class="glass-card p-8 rounded-2xl text-center border border-primary/30 transition-all shadow-[0_0_25px_rgba(38,217,177,0.12)] group">
+              <div class="w-24 h-24 bg-gray-800/90 rounded-full mx-auto mb-6 flex items-center justify-center border border-primary/40 shadow-[0_0_20px_rgba(38,217,177,0.3)]">
+                <svg class="w-12 h-12 text-primary" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-2">Hamood Lashkari</h3>
+              <p class="text-primary text-sm font-medium mb-3">Head of Execution</p>
+              <p class="text-gray-400 text-sm leading-relaxed">
+                Specializing in high-frequency liquidity and risk management.
+              </p>
+            </div>
+
+            <!-- Mentor 3 -->
+            <div class="glass-card p-8 rounded-2xl text-center border border-gray-800 hover:border-primary/30 transition-all group">
+              <div class="w-24 h-24 bg-gray-800/90 rounded-full mx-auto mb-6 flex items-center justify-center border border-gray-700 shadow-inner group-hover:border-primary/40 transition-colors">
+                <svg class="w-12 h-12 text-primary/80 group-hover:text-primary transition-colors" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-2">Imran Naveed</h3>
+              <p class="text-primary text-sm font-medium mb-3">Technical Analyst</p>
+              <p class="text-gray-400 text-sm leading-relaxed">
+                Leading authority on derivative structures and market psychology.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Pre-Footer CTA -->
+      <section class="py-20 relative overflow-hidden bg-gradient-to-b from-[#090e0f] to-[#0d1415]">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+          <h2 class="text-3xl sm:text-5xl font-black text-white mb-6">
+            Ready to trade like an <span class="text-gradient">Institution?</span>
+          </h2>
+          <p class="text-gray-400 text-base sm:text-lg mb-8 max-w-xl mx-auto">
+            Join over 12,000 disciplined traders who transformed their consistency with Paradigm methodology.
+          </p>
+          <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <button onclick="switchView('pricing')" class="px-8 py-4 rounded-xl bg-primary hover:bg-teal-400 text-background-dark font-black text-sm tracking-wider uppercase btn-primary-glow">
+              Explore Membership Tiers
+            </button>
+            <button onclick="switchView('courses')" class="px-8 py-4 rounded-xl glass-card hover:bg-gray-800 text-white font-bold text-sm tracking-wider uppercase border border-gray-700">
+              Browse Academy Curriculum
+            </button>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+
+    <!-- =======================================================================
+         VIEW 2: COURSES / LMS ACADEMY (Matching web pic 2)
+         ======================================================================= -->
+    <div id="view-courses" class="app-view hidden">
+      <section class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Header -->
+        <div class="mb-12">
+          <h1 class="text-4xl sm:text-6xl font-black text-white tracking-tight mb-4">
+            Master the <span class="text-gradient">Art of Trading</span>
+          </h1>
+          <p class="text-gray-400 text-base sm:text-lg max-w-2xl">
+            Elevate your market mastery with our elite curriculum. Designed for data-driven traders aiming for precision and profitability.
+          </p>
+        </div>
+
+        <!-- Filter & Search Controls (Exact replica of mockup 2) -->
+        <div class="glass-card p-4 rounded-2xl mb-12 flex flex-col md:flex-row items-center justify-between gap-4 border border-gray-800">
+          
+          <!-- Category Pills -->
+          <div class="flex flex-wrap items-center gap-2 w-full md:w-auto">
+            <button class="course-filter-btn px-5 py-2 rounded-xl text-xs font-bold bg-primary text-background-dark transition-all" data-category="all">
+              All
+            </button>
+            <button class="course-filter-btn px-5 py-2 rounded-xl text-xs font-semibold bg-gray-800/60 text-gray-300 hover:bg-gray-800 transition-all" data-category="forex">
+              Forex
+            </button>
+            <button class="course-filter-btn px-5 py-2 rounded-xl text-xs font-semibold bg-gray-800/60 text-gray-300 hover:bg-gray-800 transition-all" data-category="crypto">
+              Crypto
+            </button>
+            <button class="course-filter-btn px-5 py-2 rounded-xl text-xs font-semibold bg-gray-800/60 text-gray-300 hover:bg-gray-800 transition-all" data-category="psychology">
+              Psychology
+            </button>
+            <button class="course-filter-btn px-5 py-2 rounded-xl text-xs font-semibold bg-gray-800/60 text-gray-300 hover:bg-gray-800 transition-all" data-category="algorithmic">
+              Algorithmic
+            </button>
+          </div>
+
+          <!-- Search & Difficulty Controls -->
+          <div class="flex items-center gap-3 w-full md:w-auto">
+            <!-- Search bar -->
+            <div class="relative flex-grow md:w-64">
+              <svg class="w-4 h-4 text-gray-400 absolute left-3.5 top-1/2 -translate-y-1/2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+              <input type="text" id="course-search-input" placeholder="Search courses..." class="w-full bg-gray-900/90 text-sm text-gray-100 placeholder-gray-500 rounded-xl pl-10 pr-4 py-2 border border-gray-700/80 focus:outline-none focus:border-primary">
+            </div>
+
+            <!-- Difficulty Select -->
+            <div class="relative">
+              <select id="course-difficulty-select" class="bg-gray-900/90 text-sm text-gray-300 rounded-xl px-4 py-2 border border-gray-700/80 focus:outline-none focus:border-primary pr-8 appearance-none cursor-pointer">
+                <option value="all">Difficulty</option>
+                <option value="Beginner">Beginner</option>
+                <option value="Intermediate">Intermediate</option>
+                <option value="Advanced">Advanced</option>
+                <option value="All Levels">All Levels</option>
+              </select>
+              <svg class="w-4 h-4 text-gray-400 absolute right-2.5 top-1/2 -translate-y-1/2 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Dynamic Courses Grid (Populated by js/courses.js) -->
+        <div id="courses-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Populated dynamically -->
+        </div>
+
+      </section>
+    </div>
+
+
+    <!-- =======================================================================
+         VIEW 3: TRADER DASHBOARD (Matching web pic 3)
+         ======================================================================= -->
+    <div id="view-dashboard" class="app-view hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+          
+          <!-- Left Sidebar (Trader Profile & Menu) -->
+          <div class="lg:col-span-3">
+            <div class="glass-card p-6 rounded-2xl border border-gray-800 sticky top-28">
+              
+              <!-- User Profile Header -->
+              <div class="text-center pb-6 border-b border-gray-800">
+                <div class="relative w-20 h-20 mx-auto mb-4">
+                  <img src="assets/logo.png" class="w-full h-full rounded-full object-cover border-2 border-primary shadow-[0_0_20px_rgba(38,217,177,0.4)]" alt="Avatar">
+                  <span class="absolute bottom-1 right-1 w-4 h-4 bg-emerald-400 rounded-full border-2 border-[#121819] pulse-dot"></span>
+                </div>
+                <h3 class="font-extrabold text-white text-lg">Alex Vance</h3>
+                <span class="inline-block mt-1 px-3 py-0.5 rounded-full bg-accent-purple/20 border border-accent-purple/40 text-purple-300 text-xs font-semibold">
+                  Elite Member
+                </span>
+              </div>
+
+              <!-- Sidebar Navigation Menu -->
+              <nav class="mt-6 space-y-1.5">
+                <button class="w-full flex items-center gap-3 px-4 py-3 rounded-xl bg-accent-purple text-white font-bold text-sm shadow-[0_0_18px_rgba(138,43,226,0.35)]">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>
+                  <span>Dashboard</span>
+                </button>
+                <button onclick="switchView('courses')" class="w-full flex items-center gap-3 px-4 py-3 rounded-xl text-gray-400 hover:text-white hover:bg-gray-800/60 font-medium text-sm transition-colors">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                  <span>Courses</span>
+                </button>
+                <button onclick="switchView('signals')" class="w-full flex items-center gap-3 px-4 py-3 rounded-xl text-gray-400 hover:text-white hover:bg-gray-800/60 font-medium text-sm transition-colors">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                  <span>Trade Signals</span>
+                </button>
+                <button onclick="showToast('Community Discord & Matrix feeds synchronized!')" class="w-full flex items-center gap-3 px-4 py-3 rounded-xl text-gray-400 hover:text-white hover:bg-gray-800/60 font-medium text-sm transition-colors">
+                  <svg class="w-5 h-5 fill-none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                  <span>Community</span>
+                </button>
+                <button onclick="showToast('Settings panel updated. 2FA is active.')" class="w-full flex items-center gap-3 px-4 py-3 rounded-xl text-gray-400 hover:text-white hover:bg-gray-800/60 font-medium text-sm transition-colors">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                  <span>Settings</span>
+                </button>
+              </nav>
+
+              <!-- Go Live Room CTA -->
+              <div class="mt-8 pt-6 border-t border-gray-800">
+                <button onclick="joinWebinarRoom()" class="w-full py-3.5 rounded-xl bg-primary hover:bg-teal-400 text-background-dark font-black text-sm tracking-wider uppercase transition-all flex items-center justify-center gap-2 btn-primary-glow">
+                  <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                  <span>Go Live Room</span>
+                </button>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Main Dashboard Center & Right Grid -->
+          <div class="lg:col-span-9 space-y-8">
+            
+            <!-- Dashboard Welcome & Server Status Banner -->
+            <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+              <div>
+                <h1 class="text-3xl sm:text-4xl font-black text-white">
+                  Welcome back, <span class="text-primary">Alex</span>
+                </h1>
+                <p class="text-sm text-gray-400 mt-1">
+                  Market is open. Last login: 2 hours ago from New York.
+                </p>
+              </div>
+
+              <div class="flex items-center gap-2 px-4 py-2 rounded-xl bg-gray-900 border border-teal-500/30 text-xs font-mono text-primary shadow-[0_0_15px_rgba(38,217,177,0.15)]">
+                <span class="w-2.5 h-2.5 rounded-full bg-primary pulse-dot"></span>
+                <span>LIVE SERVER • 12ms</span>
+              </div>
+            </div>
+
+            <!-- 3 Metric Cards (Exact replica of mockup 3) -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+              
+              <!-- Metric 1: Profit Pips -->
+              <div class="glass-card p-6 rounded-2xl border border-gray-800">
+                <div class="flex items-center justify-between text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">
+                  <span>Total Profit Pips</span>
+                  <div class="w-8 h-8 rounded-lg bg-teal-500/10 text-primary flex items-center justify-center">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                  </div>
+                </div>
+                <div class="text-3xl font-black text-white font-mono mb-1">
+                  +1,245
+                </div>
+                <div class="text-xs text-emerald-400 font-medium flex items-center gap-1">
+                  <span>↑ 12%</span>
+                  <span class="text-gray-500">this week</span>
+                </div>
+              </div>
+
+              <!-- Metric 2: Win Rate -->
+              <div class="glass-card p-6 rounded-2xl border border-gray-800">
+                <div class="flex items-center justify-between text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">
+                  <span>Win Rate</span>
+                  <div class="w-8 h-8 rounded-lg bg-purple-500/10 text-purple-400 flex items-center justify-center">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"></path></svg>
+                  </div>
+                </div>
+                <div class="text-3xl font-black text-white font-mono mb-1">
+                  68.5%
+                </div>
+                <div class="text-xs text-gray-400 font-medium">
+                  Avg. across 50 trades
+                </div>
+              </div>
+
+              <!-- Metric 3: Courses Completed -->
+              <div class="glass-card p-6 rounded-2xl border border-gray-800">
+                <div class="flex items-center justify-between text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">
+                  <span>Courses Completed</span>
+                  <div class="w-8 h-8 rounded-lg bg-blue-500/10 text-blue-400 flex items-center justify-center">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>
+                  </div>
+                </div>
+                <div class="text-3xl font-black text-white font-mono mb-1">
+                  4 <span class="text-lg text-gray-500">/ 12</span>
+                </div>
+                <div class="text-xs text-primary font-medium">
+                  Mastery Track
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Two-Column Grid: Active Course & Upcoming Webinar + Live Signals -->
+            <div class="grid grid-cols-1 xl:grid-cols-12 gap-8">
+              
+              <!-- Left Column: Active Course & Webinar -->
+              <div class="xl:col-span-7 space-y-8">
+                
+                <!-- Active Course Card -->
+                <div class="glass-card p-6 rounded-2xl border border-teal-500/30 relative overflow-hidden">
+                  <div class="flex items-center justify-between mb-4">
+                    <div class="flex items-center gap-2">
+                      <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                      <h3 class="font-extrabold text-white text-base">Active Course</h3>
+                    </div>
+                    <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-purple-500/20 text-purple-300 border border-purple-500/30">
+                      IN PROGRESS
+                    </span>
+                  </div>
+
+                  <div class="flex flex-col sm:flex-row items-center gap-5 mb-6">
+                    <div class="relative w-full sm:w-44 h-28 rounded-xl overflow-hidden bg-black flex-shrink-0 group cursor-pointer" onclick="openCourseModal('advanced-price-action')">
+                      <img src="https://images.unsplash.com/photo-1642543492481-44e81e3914a7?auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover opacity-70 group-hover:scale-105 transition-transform" alt="Thumbnail">
+                      <div class="absolute inset-0 flex items-center justify-center">
+                        <div class="w-10 h-10 rounded-full bg-primary text-black flex items-center justify-center text-sm shadow-[0_0_15px_rgba(38,217,177,0.7)]">
+                          ▶
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex-grow">
+                      <h4 class="text-lg font-black text-white mb-1.5">
+                        Advanced Price Action Masterclass
+                      </h4>
+                      <p class="text-xs text-gray-400 leading-relaxed">
+                        Module 3: Supply & Demand Zones identifying institutional footprints.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div>
+                    <div class="flex justify-between text-xs text-gray-400 font-medium mb-1.5">
+                      <span>Progress</span>
+                      <span class="text-primary font-bold">65%</span>
+                    </div>
+                    <div class="w-full bg-gray-800 rounded-full h-2.5 overflow-hidden">
+                      <div class="bg-gradient-to-r from-primary to-accent-purple h-2.5 rounded-full progress-fill" style="width: 65%"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Upcoming Webinar Card -->
+                <div class="glass-card p-6 rounded-2xl border border-gray-800">
+                  <div class="flex items-center justify-between mb-4">
+                    <div class="flex items-center gap-2">
+                      <svg class="w-5 h-5 text-accent-purple-light" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                      <h3 class="font-extrabold text-white text-base">Upcoming Webinar</h3>
+                    </div>
+                  </div>
+
+                  <div class="flex items-center justify-between gap-4 p-4 rounded-xl bg-gray-900/60 border border-gray-800 mb-6">
+                    <div class="flex items-center gap-3">
+                      <div class="w-12 h-12 rounded-full bg-gray-800 border border-primary/40 flex items-center justify-center text-primary flex-shrink-0 shadow-inner">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                        </svg>
+                      </div>
+                      <div>
+                        <h4 class="font-bold text-white text-sm">Live Trading Session & Q&A</h4>
+                        <span class="text-xs text-gray-400">with Head Trader Marcus</span>
+                      </div>
+                    </div>
+                    <div class="text-right font-mono">
+                      <span id="webinar-countdown" class="text-lg font-extrabold text-primary block">2hrs 14m 35s</span>
+                      <span class="text-[10px] text-gray-400">Starts at 14:00 GMT</span>
+                    </div>
+                  </div>
+
+                  <div class="flex gap-3">
+                    <button onclick="remindWebinar()" class="flex-1 py-2.5 rounded-xl border border-gray-700 hover:bg-gray-800 text-gray-200 text-xs font-bold transition-colors flex items-center justify-center gap-2">
+                      <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                      <span>Remind Me</span>
+                    </button>
+                    <button onclick="joinWebinarRoom()" class="flex-1 py-2.5 rounded-xl bg-gray-800 hover:bg-primary hover:text-black text-gray-300 text-xs font-bold transition-all flex items-center justify-center gap-2">
+                      <span>Join Room (Open)</span>
+                    </button>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Right Column: Live Signals Feed -->
+              <div class="xl:col-span-5">
+                <div class="glass-card p-6 rounded-2xl border border-gray-800 flex flex-col justify-between h-full">
+                  <div>
+                    <div class="flex items-center justify-between mb-6">
+                      <div class="flex items-center gap-2">
+                        <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        <h3 class="font-extrabold text-white text-base">Live Signals</h3>
+                      </div>
+                      <span class="w-2.5 h-2.5 rounded-full bg-primary pulse-dot"></span>
+                    </div>
+
+                    <!-- Signals List (Populated by js/signals.js) -->
+                    <div id="dashboard-signals-list" class="space-y-4 mb-6">
+                      <!-- Populated dynamically -->
+                    </div>
+                  </div>
+
+                  <div class="pt-4 border-t border-gray-800 text-center">
+                    <button onclick="switchView('signals')" class="text-xs font-bold text-primary hover:text-white transition-colors inline-flex items-center gap-1.5">
+                      <span>View All Signals Terminal</span>
+                      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- =======================================================================
+         VIEW 4: SIGNALS TERMINAL & INTERACTIVE CHART
+         ======================================================================= -->
+    <div id="signals" class="app-view hidden">
+      <section class="py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Signals Header -->
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
+          <div>
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/30 text-primary text-xs font-bold mb-2">
+              <span class="w-2 h-2 rounded-full bg-primary pulse-dot"></span>
+              INSTITUTIONAL EXECUTION DESK
+            </div>
+            <h1 class="text-3xl sm:text-5xl font-black text-white">
+              Live Signals & <span class="text-gradient">Market Terminal</span>
+            </h1>
+          </div>
+
+          <div class="flex items-center gap-3">
+            <button onclick="openCalcWithSignal('EUR/USD', 1.0850, 1.0810)" class="px-4 py-2.5 rounded-xl bg-gray-800 hover:bg-gray-700 text-gray-200 text-xs font-bold transition-colors flex items-center gap-2">
+              <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+              <span>Lot Size Calculator</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Interactive Candlestick Chart Engine -->
+        <div class="glass-card p-6 rounded-2xl border border-gray-800 mb-12">
+          
+          <!-- Chart Controls Bar -->
+          <div class="flex flex-wrap items-center justify-between gap-4 pb-4 border-b border-gray-800 mb-4">
+            
+            <!-- Market Indicator (Clean Institutional View) -->
+            <div class="flex items-center gap-3">
+              <span class="w-2.5 h-2.5 rounded-full bg-primary pulse-dot"></span>
+              <div class="flex items-center gap-2">
+                <span class="font-extrabold text-white text-base tracking-wide">XAU/USD (Spot Gold)</span>
+                <span class="text-[10px] px-2 py-0.5 rounded bg-primary/10 text-primary font-bold border border-primary/20">INSTITUTIONAL FEED</span>
+              </div>
+            </div>
+
+            <!-- Price & Timeframes -->
+            <div class="flex items-center gap-6">
+              <div class="font-mono text-sm">
+                <span id="chart-symbol-name" class="text-gray-400 mr-2">XAU/USD</span>
+                <span id="chart-live-price" class="text-primary font-bold text-base">2045.50</span>
+              </div>
+
+              <div class="flex items-center bg-gray-900 rounded-lg p-1 border border-gray-800">
+                <button onclick="switchChartTf('1M', this)" class="chart-tf-btn px-2 py-1 text-[11px] rounded text-gray-500 font-semibold">1M</button>
+                <button onclick="switchChartTf('5M', this)" class="chart-tf-btn px-2 py-1 text-[11px] rounded text-gray-500 font-semibold">5M</button>
+                <button onclick="switchChartTf('15M', this)" class="chart-tf-btn px-2 py-1 text-[11px] rounded bg-gray-800 text-white font-semibold">15M</button>
+                <button onclick="switchChartTf('1H', this)" class="chart-tf-btn px-2 py-1 text-[11px] rounded text-gray-500 font-semibold">1H</button>
+                <button onclick="switchChartTf('1D', this)" class="chart-tf-btn px-2 py-1 text-[11px] rounded text-gray-500 font-semibold">1D</button>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- HTML5 Canvas Element -->
+          <div class="chart-container">
+            <canvas id="tradingview-canvas"></canvas>
+          </div>
+          <div class="mt-3 flex items-center justify-between text-xs text-gray-500">
+            <div class="flex items-center gap-4">
+              <span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 bg-primary rounded-sm"></span> Bullish Candle</span>
+              <span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 bg-rose-500 rounded-sm"></span> Bearish Candle</span>
+              <span class="flex items-center gap-1.5"><span class="w-2.5 h-0.5 bg-accent-purple"></span> EMA (20) Dynamic Trail</span>
+            </div>
+            <span>Interactive Crosshair Active • Real-Time Institutional Feed</span>
+          </div>
+
+        </div>
+
+        <!-- Full Signals Grid (Populated by js/signals.js) -->
+        <h3 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+          <span>Active Trade Calls & Institutional Order Blocks</span>
+          <span class="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-primary/10 text-primary border border-primary/20">4 Live Setups</span>
+        </h3>
+
+        <div id="full-signals-list" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- Populated dynamically -->
+        </div>
+
+      </section>
+    </div>
+
+
+    <!-- =======================================================================
+         VIEW 5: PRICING (Matching web pic 4)
+         ======================================================================= -->
+    <div id="view-pricing" class="app-view hidden">
+      <section class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Header with "JOIN THE ELITE" pill -->
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-accent-purple/20 border border-accent-purple/40 text-purple-300 text-xs font-bold uppercase tracking-widest mb-6">
+            <span>Join The Elite</span>
+          </div>
+          
+          <h1 class="text-4xl sm:text-6xl font-black text-white tracking-tight mb-4">
+            Choose Your <span class="text-gradient">Trading Edge</span>
+          </h1>
+
+          <p class="text-gray-400 text-base sm:text-lg leading-relaxed">
+            Unlock professional-grade tools, institutional-level signals, and comprehensive education to master the markets.
+          </p>
+
+          <!-- Monthly / Annual Toggle Switch -->
+          <div class="mt-8 flex items-center justify-center gap-4">
+            <span class="text-sm font-semibold text-gray-300">Billed Monthly</span>
+            <label class="relative inline-flex items-center cursor-pointer">
+              <input type="checkbox" id="pricing-billing-toggle" class="sr-only peer">
+              <div class="w-14 h-7 bg-gray-800 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[4px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-6 after:w-6 after:transition-all peer-checked:bg-primary"></div>
+            </label>
+            <span class="text-sm font-semibold text-gray-300 flex items-center gap-2">
+              Billed Annually
+              <span class="px-2 py-0.5 text-[10px] font-extrabold uppercase rounded bg-primary/20 text-primary border border-primary/30">
+                Save 20%
+              </span>
+            </span>
+          </div>
+
+        </div>
+
+        <!-- 3 Tier Pricing Cards (Exact replica of mockup 4) -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+          
+          <!-- Basic Tier Card -->
+          <div class="glass-card p-8 rounded-3xl border border-gray-800 flex flex-col justify-between">
+            <div>
+              <h3 class="text-2xl font-black text-white mb-2">Basic</h3>
+              <div class="flex items-baseline gap-1 mb-4">
+                <span id="price-basic" class="text-5xl font-black text-white font-mono">$49</span>
+                <span id="period-basic" class="text-sm text-gray-400">/month</span>
+              </div>
+              <p class="text-sm text-gray-400 mb-8">
+                Essential tools for ambitious beginners.
+              </p>
+
+              <!-- Features Checklist -->
+              <ul class="space-y-4 text-sm mb-8">
+                <li class="flex items-center gap-3 text-gray-200">
+                  <svg class="w-5 h-5 text-primary flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                  <span>Access to foundations course</span>
+                </li>
+                <li class="flex items-center gap-3 text-gray-200">
+                  <svg class="w-5 h-5 text-primary flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                  <span>Public community access</span>
+                </li>
+                <li class="flex items-center gap-3 text-gray-500 opacity-60">
+                  <svg class="w-5 h-5 text-gray-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                  <span class="line-through">Trading signals</span>
+                </li>
+                <li class="flex items-center gap-3 text-gray-500 opacity-60">
+                  <svg class="w-5 h-5 text-gray-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                  <span class="line-through">1-on-1 Coaching</span>
+                </li>
+              </ul>
+            </div>
+
+            <button onclick="openCheckoutModal('Basic', '$49')" class="w-full py-4 rounded-xl border border-gray-700 hover:border-primary/50 text-white font-bold text-sm tracking-wider uppercase transition-colors hover:bg-gray-800/80">
+              Start Basic
+            </button>
+          </div>
+
+          <!-- Elite Tier Card (MOST POPULAR - Highlighted Purple Card) -->
+          <div class="glass-card-purple p-8 rounded-3xl relative flex flex-col justify-between -translate-y-2 lg:-translate-y-4">
+            
+            <!-- Most Popular Badge -->
+            <div class="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-accent-purple text-white text-xs font-extrabold uppercase tracking-widest shadow-[0_0_15px_rgba(138,43,226,0.6)]">
+              Most Popular
+            </div>
+
+            <div>
+              <h3 class="text-2xl font-black text-white mb-2">Elite</h3>
+              <div class="flex items-baseline gap-1 mb-4">
+                <span id="price-elite" class="text-5xl font-black text-white font-mono">$199</span>
+                <span id="period-elite" class="text-sm text-gray-400">/month</span>
+              </div>
+              <p class="text-sm text-gray-300 mb-8">
+                The ultimate edge for serious traders.
+              </p>
+
+              <!-- Features Checklist -->
+              <ul class="space-y-4 text-sm mb-8">
+                <li class="flex items-center gap-3 text-white font-medium">
+                  <svg class="w-5 h-5 text-primary flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                  <span>1-on-1 coaching sessions</span>
+                </li>
+                <li class="flex items-center gap-3 text-white font-medium">
+                  <svg class="w-5 h-5 text-primary flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                  <span>Daily institutional signals</span>
+                </li>
+                <li class="flex items-center gap-3 text-white font-medium">
+                  <svg class="w-5 h-5 text-primary flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                  <span>Proprietary algorithmic tools</span>
+                </li>
+                <li class="flex items-center gap-3 text-white font-medium">
+                  <svg class="w-5 h-5 text-primary flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                  <span>Everything in Pro</span>
+                </li>
+                <li class="flex items-center gap-3 text-white font-medium">
+                  <svg class="w-5 h-5 text-primary flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                  <span>Direct VIP Discord Channel with Mentors</span>
+                </li>
+              </ul>
+            </div>
+
+            <button onclick="openCheckoutModal('Elite', '$199')" class="w-full py-4 rounded-xl bg-accent-purple hover:bg-purple-600 text-white font-black text-sm tracking-wider uppercase transition-all btn-purple-glow">
+              Claim Elite Access
+            </button>
+          </div>
+
+          <!-- Pro Tier Card -->
+          <div class="glass-card p-8 rounded-3xl border border-gray-800 flex flex-col justify-between">
+            <div>
+              <h3 class="text-2xl font-black text-white mb-2">Pro</h3>
+              <div class="flex items-baseline gap-1 mb-4">
+                <span id="price-pro" class="text-5xl font-black text-white font-mono">$99</span>
+                <span id="period-pro" class="text-sm text-gray-400">/month</span>
+              </div>
+              <p class="text-sm text-gray-400 mb-8">
+                Advanced strategies for active traders.
+              </p>
+
+              <!-- Features Checklist -->
+              <ul class="space-y-4 text-sm mb-8">
+                <li class="flex items-center gap-3 text-gray-200">
+                  <svg class="w-5 h-5 text-primary flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                  <span>Full course library</span>
+                </li>
+                <li class="flex items-center gap-3 text-gray-200">
+                  <svg class="w-5 h-5 text-primary flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                  <span>Weekly trading signals</span>
+                </li>
+                <li class="flex items-center gap-3 text-gray-200">
+                  <svg class="w-5 h-5 text-primary flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                  <span>Private community access</span>
+                </li>
+                <li class="flex items-center gap-3 text-gray-500 opacity-60">
+                  <svg class="w-5 h-5 text-gray-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                  <span class="line-through">1-on-1 Coaching</span>
+                </li>
+              </ul>
+            </div>
+
+            <button onclick="openCheckoutModal('Pro', '$99')" class="w-full py-4 rounded-xl border border-gray-700 hover:border-primary/50 text-white font-bold text-sm tracking-wider uppercase transition-colors hover:bg-gray-800/80">
+              Start Pro
+            </button>
+          </div>
+
+        </div>
+
+        <!-- Crypto / Exchange Trust Bar -->
+        <div class="mt-20 pt-12 border-t border-gray-800 text-center">
+          <p class="text-xs font-bold uppercase tracking-widest text-gray-500 mb-8">
+            Trusted by Traders Worldwide
+          </p>
+          <div class="flex flex-wrap items-center justify-center gap-10 md:gap-20 text-gray-400 font-bold tracking-widest text-sm uppercase opacity-70">
+            <span>BINANCE</span>
+            <span>COINBASE</span>
+            <span>KRAKEN</span>
+            <span>OKX</span>
+            <span>BYBIT</span>
+          </div>
+        </div>
+
+      </section>
+    </div>
+
+
+    <!-- =======================================================================
+         VIEW 6: MENTORS (Matching screen.png & mockup)
+         ======================================================================= -->
+    <div id="view-mentors" class="app-view hidden">
+      <section class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h1 class="text-4xl sm:text-6xl font-black text-white tracking-tight mb-4">
+            Our <span class="text-primary">Mentors</span>
+          </h1>
+          <p class="text-gray-400 text-base sm:text-lg">
+            Guided by industry veterans with decades of combined experience in global financial markets.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          
+          <!-- Mentor 1: Ammar Burney -->
+          <div class="glass-card p-8 rounded-2xl text-center border border-gray-800 hover:border-primary/40 transition-all group">
+            <div class="w-24 h-24 bg-gray-800/90 rounded-full mx-auto mb-6 flex items-center justify-center border border-gray-700 shadow-inner group-hover:border-primary/40 transition-colors">
+              <svg class="w-12 h-12 text-primary/80 group-hover:text-primary transition-colors" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-1">Ammar Burney</h3>
+            <p class="text-primary text-sm font-semibold mb-4">Senior Market Strategist</p>
+            <p class="text-gray-400 text-sm leading-relaxed mb-6">
+              Expert in algorithmic trading, macro-economic cycle forecasting, and quantitative central bank interest rate differentials.
+            </p>
+            <div class="flex justify-center gap-2 mb-6">
+              <span class="text-[11px] px-2 py-0.5 rounded bg-gray-800 text-gray-300">11+ Yrs Exp</span>
+              <span class="text-[11px] px-2 py-0.5 rounded bg-gray-800 text-gray-300">Quant / Macro</span>
+            </div>
+            <button onclick="bookMentorSession('Ammar Burney')" class="w-full py-2.5 rounded-lg border border-primary/30 text-primary hover:bg-primary hover:text-black font-semibold text-xs tracking-wider uppercase transition-all">
+              Book Office Hours
+            </button>
+          </div>
+
+          <!-- Mentor 2: Hamood Lashkari -->
+          <div class="glass-card p-8 rounded-2xl text-center border border-primary/40 shadow-[0_0_30px_rgba(38,217,177,0.15)] group">
+            <div class="w-24 h-24 bg-gray-800/90 rounded-full mx-auto mb-6 flex items-center justify-center border border-primary/40 shadow-[0_0_20px_rgba(38,217,177,0.3)]">
+              <svg class="w-12 h-12 text-primary" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-1">Hamood Lashkari</h3>
+            <p class="text-primary text-sm font-semibold mb-4">Head of Execution</p>
+            <p class="text-gray-400 text-sm leading-relaxed mb-6">
+              Specializing in high-frequency order book liquidity, institutional smart money concepts (SMC), and strict capital preservation.
+            </p>
+            <div class="flex justify-center gap-2 mb-6">
+              <span class="text-[11px] px-2 py-0.5 rounded bg-primary/20 text-primary">Chief Trader</span>
+              <span class="text-[11px] px-2 py-0.5 rounded bg-gray-800 text-gray-300">Prop Firm Mentor</span>
+            </div>
+            <button onclick="bookMentorSession('Hamood Lashkari')" class="w-full py-2.5 rounded-lg bg-primary hover:bg-teal-400 text-background-dark font-bold text-xs tracking-wider uppercase transition-all shadow-[0_0_15px_rgba(38,217,177,0.3)]">
+              Book Office Hours
+            </button>
+          </div>
+
+          <!-- Mentor 3: Imran Naveed -->
+          <div class="glass-card p-8 rounded-2xl text-center border border-gray-800 hover:border-primary/40 transition-all group">
+            <div class="w-24 h-24 bg-gray-800/90 rounded-full mx-auto mb-6 flex items-center justify-center border border-gray-700 shadow-inner group-hover:border-primary/40 transition-colors">
+              <svg class="w-12 h-12 text-primary/80 group-hover:text-primary transition-colors" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-1">Imran Naveed</h3>
+            <p class="text-primary text-sm font-semibold mb-4">Technical Analyst</p>
+            <p class="text-gray-400 text-sm leading-relaxed mb-6">
+              Leading authority on multi-timeframe price action, derivative structures, naked candlestick flow, and trader psychological rewiring.
+            </p>
+            <div class="flex justify-center gap-2 mb-6">
+              <span class="text-[11px] px-2 py-0.5 rounded bg-gray-800 text-gray-300">9+ Yrs Exp</span>
+              <span class="text-[11px] px-2 py-0.5 rounded bg-gray-800 text-gray-300">Price Action Specialist</span>
+            </div>
+            <button onclick="bookMentorSession('Imran Naveed')" class="w-full py-2.5 rounded-lg border border-primary/30 text-primary hover:bg-primary hover:text-black font-semibold text-xs tracking-wider uppercase transition-all">
+              Book Office Hours
+            </button>
+          </div>
+
+        </div>
+      </section>
+    </div>
+
+  </main>
+
+
+  <!-- =========================================================================
+       FOOTER (Matching mockup & stitch file)
+       ========================================================================= -->
+  <footer class="bg-[#06090a] border-t border-gray-800/80 pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+        
+        <!-- Brand Column -->
+        <div class="md:col-span-1">
+          <div class="flex items-center space-x-3 mb-4">
+            <img alt="Paradigm Traders Logo" class="h-9 w-auto rounded-full object-cover border border-teal-500/40" src="assets/logo.png">
+            <span class="text-lg font-black tracking-wider text-white">PARADIGM</span>
+          </div>
+          <p class="text-gray-400 text-xs leading-relaxed mb-6">
+            Advanced market intelligence and precision execution for the modern trader. Empowering the future of algorithmic and price-action finance.
+          </p>
+          <div class="flex space-x-4">
+            <a class="text-gray-400 hover:text-primary transition-colors text-xs flex items-center gap-1" href="#home">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
+              Global Server
+            </a>
+            <a class="text-gray-400 hover:text-primary transition-colors text-xs flex items-center gap-1" href="#signals">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"></path></svg>
+              Signals Network
+            </a>
+          </div>
+        </div>
+
+        <!-- Products Column -->
+        <div>
+          <h4 class="text-white font-bold mb-4 tracking-wider text-xs uppercase">Products & Services</h4>
+          <ul class="space-y-2.5 text-xs text-gray-400">
+            <li><a class="hover:text-primary transition-colors" href="#courses" onclick="switchView('courses')">Academy Curriculum</a></li>
+            <li><a class="hover:text-primary transition-colors" href="#signals" onclick="switchView('signals')">Institutional Signals Desk</a></li>
+            <li><a class="hover:text-primary transition-colors" href="#dashboard" onclick="switchView('dashboard')">Live Trading Room</a></li>
+            <li><a class="hover:text-primary transition-colors" href="#signals" onclick="switchView('signals')">Lot Size & Risk Calculator</a></li>
+          </ul>
+        </div>
+
+        <!-- Support Column -->
+        <div>
+          <h4 class="text-white font-bold mb-4 tracking-wider text-xs uppercase">Platform & Support</h4>
+          <ul class="space-y-2.5 text-xs text-gray-400">
+            <li><a class="hover:text-primary transition-colors" href="javascript:showToast('Discord community synchronized!')">Trader Discord Community</a></li>
+            <li><a class="hover:text-primary transition-colors" href="javascript:showToast('MT5 Terminal Gateway Operational.')">MetaTrader 5 Bridge</a></li>
+            <li><a class="hover:text-primary transition-colors" href="#pricing" onclick="switchView('pricing')">Prop Firm Passing Guarantee</a></li>
+            <li><a class="hover:text-primary transition-colors" href="javascript:showToast('Support desk 24/7 active via desk@paradigmtraders.com')">24/7 Desk Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Company Column -->
+        <div>
+          <h4 class="text-white font-bold mb-4 tracking-wider text-xs uppercase">Company</h4>
+          <ul class="space-y-2.5 text-xs text-gray-400">
+            <li><a class="hover:text-primary transition-colors" href="#mentors" onclick="switchView('mentors')">Our Mentors</a></li>
+            <li><a class="hover:text-primary transition-colors" href="#home" onclick="switchView('home')">The Paradigm Advantage</a></li>
+            <li><a class="hover:text-primary transition-colors" href="#pricing" onclick="switchView('pricing')">Membership Tiers</a></li>
+            <li><a class="hover:text-primary transition-colors" href="javascript:showToast('Careers page: 2 Quantitative Research roles open.')">Careers</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Financial Disclaimer Notice -->
+      <div class="border-t border-gray-900 pt-6 pb-6 text-gray-500 text-[11px] leading-relaxed">
+        <p>
+          <strong class="text-gray-400">Risk Disclosure:</strong> Trading foreign exchange, cryptocurrencies, and derivatives involves substantial risk of loss and is not suitable for all investors. An investor could potentially lose all or more than the initial investment. Risk capital is money that can be lost without jeopardizing one's financial security or lifestyle. Only risk capital should be used for trading and only those with sufficient risk capital should consider trading. Past performance is not necessarily indicative of future results. Paradigm Traders provides educational and informational market analysis only.
+        </p>
+      </div>
+
+      <!-- Copyright Bar -->
+      <div class="border-t border-gray-900 pt-6 flex flex-col md:flex-row justify-between items-center text-gray-500 text-xs gap-4">
+        <div class="flex items-center gap-2">
+          <p class="mb-0">
+            © 2026 <strong class="text-white">@paradigmtraders</strong>. All rights reserved.
+          </p>
+        </div>
+
+        <!-- Last Bottom @paradigmtraders Button -->
+        <div>
+          <a href="https://chat.whatsapp.com/GDw1o17UF9VFSYQxqpvIKn" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-primary/10 hover:bg-primary/20 text-primary border border-primary/30 font-bold text-xs tracking-wider transition-all shadow-[0_0_15px_rgba(38,217,177,0.25)] hover:scale-105 group" title="Connect with @paradigmtraders on WhatsApp">
+            <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+            <span>@paradigmtraders</span>
+            <svg class="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+          </a>
+        </div>
+
+        <div class="flex space-x-6">
+          <a class="hover:text-gray-400 transition-colors" href="javascript:showToast('Privacy Policy: Zero data selling guarantee.')">Privacy Policy</a>
+          <a class="hover:text-gray-400 transition-colors" href="javascript:showToast('Terms of Service: Standard educational platform terms.')">Terms of Service</a>
+          <a class="hover:text-gray-400 transition-colors" href="javascript:showToast('Risk Disclosure: Verified FCA & SEC compliance.')">Risk Disclosure</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- =========================================================================
+       INTERACTIVE MODALS
+       ========================================================================= -->
+
+  <!-- 1. Course Player & LMS Modal -->
+  <div id="course-modal" class="fixed inset-0 z-50 modal-backdrop hidden items-center justify-center p-4">
+    <div id="course-modal-content" class="w-full flex justify-center">
+      <!-- Injected by js/courses.js -->
+    </div>
+  </div>
+
+  <!-- 2. Webinar & Live Stream Room Modal -->
+  <div id="webinar-modal" class="fixed inset-0 z-50 modal-backdrop hidden items-center justify-center p-4">
+    <div class="relative bg-[#0e1415] border border-gray-700/80 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-2xl p-6">
+      <div class="flex items-center justify-between pb-4 border-b border-gray-800 mb-6">
+        <div class="flex items-center gap-3">
+          <span class="w-3 h-3 rounded-full bg-rose-500 pulse-dot"></span>
+          <h3 class="text-xl font-bold text-white">Live London & New York Trading Desk</h3>
+        </div>
+        <button onclick="closeWebinarRoom()" class="w-8 h-8 rounded-full bg-gray-800 text-gray-400 hover:text-white flex items-center justify-center">
+          ✕
+        </button>
+      </div>
+
+      <!-- Live Stream Simulator -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="md:col-span-2 space-y-4">
+          <div class="relative aspect-video rounded-xl bg-black overflow-hidden border border-gray-800 flex items-center justify-center">
+            <img src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?auto=format&fit=crop&w=900&q=80" class="w-full h-full object-cover opacity-50" alt="Live Desk">
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/60 flex flex-col justify-between p-4">
+              <div class="flex justify-between items-center text-xs">
+                <span class="bg-rose-500/80 text-white font-bold px-2.5 py-1 rounded">LIVE ON AIR</span>
+                <span class="text-gray-300 font-mono">1,482 Active Traders Watching</span>
+              </div>
+              <div class="text-center">
+                <p class="text-primary font-bold text-lg">Marcus Vance is analyzing EUR/USD liquidity sweeps</p>
+                <span class="text-xs text-gray-400">Audio bitstream: 320kbps • 1080p 60FPS</span>
+              </div>
+              <div class="flex justify-between items-center text-xs text-gray-400">
+                <span>Microphone: Mentor Marcus (Broadcasting)</span>
+                <span>Latency: 48ms</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Live Chat simulation -->
+        <div class="glass-card p-4 rounded-xl flex flex-col justify-between h-80 border border-gray-800">
+          <div class="text-xs font-bold uppercase tracking-wider text-gray-400 pb-2 border-b border-gray-800">
+            Live Desk Chat
+          </div>
+          <div class="space-y-3 overflow-y-auto my-2 text-xs">
+            <div class="text-gray-300"><strong class="text-primary">Marcus:</strong> Watch the 1.0850 level. If 5M closes below, invalidate longs.</div>
+            <div class="text-gray-300"><strong class="text-accent-purple-light">Elena_FX:</strong> Filled at 1.0852, SL 1.0810 locked in!</div>
+            <div class="text-gray-300"><strong class="text-emerald-400">David_Quant:</strong> Order book showing heavy institutional bids at 1.0848.</div>
+            <div class="text-gray-300"><strong class="text-yellow-400">Ammar Burney:</strong> Clean rejection confirmed on the 15M chart.</div>
+          </div>
+          <div class="pt-2 border-t border-gray-800 flex gap-2">
+            <input type="text" placeholder="Type a message..." class="w-full bg-gray-900 text-xs rounded-lg px-3 py-1.5 border border-gray-700 text-white focus:outline-none focus:border-primary">
+            <button onclick="showToast('Message sent to desk chat!')" class="px-3 py-1.5 bg-primary text-black font-bold text-xs rounded-lg">Send</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. Auth Modal (Login / Sign Up) -->
+  <div id="auth-modal" class="fixed inset-0 z-50 modal-backdrop hidden items-center justify-center p-4">
+    <div class="relative bg-[#0e1415] border border-gray-700/80 rounded-2xl max-w-md w-full shadow-2xl p-6">
+      <div class="flex items-center justify-between pb-4 border-b border-gray-800 mb-6">
+        <h3 id="auth-modal-title" class="text-xl font-bold text-white">Welcome Back, Trader</h3>
+        <button onclick="closeAuthModal()" class="w-8 h-8 rounded-full bg-gray-800 text-gray-400 hover:text-white flex items-center justify-center">
+          ✕
+        </button>
+      </div>
+
+      <!-- Tabs -->
+      <div class="flex border-b border-gray-800 mb-6 text-sm font-semibold">
+        <button id="tab-login" onclick="openAuthModal('login')" class="flex-1 py-2.5 text-center border-b-2 border-primary text-primary">
+          Log In
+        </button>
+        <button id="tab-signup" onclick="openAuthModal('signup')" class="flex-1 py-2.5 text-center border-b-2 border-transparent text-gray-400 hover:text-white">
+          Create Account
+        </button>
+      </div>
+
+      <!-- Login Form -->
+      <form id="form-login" onsubmit="handleAuthSubmit(event, 'login')" class="space-y-4">
+        <div>
+          <label class="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1.5">Email Address</label>
+          <input type="email" required value="alex.vance@paradigmtraders.com" class="w-full bg-gray-900 text-sm text-white rounded-xl px-4 py-2.5 border border-gray-700 focus:outline-none focus:border-primary">
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1.5">Password</label>
+          <input type="password" required value="••••••••••••" class="w-full bg-gray-900 text-sm text-white rounded-xl px-4 py-2.5 border border-gray-700 focus:outline-none focus:border-primary">
+        </div>
+        <div class="flex items-center justify-between text-xs text-gray-400">
+          <label class="flex items-center gap-2 cursor-pointer">
+            <input type="checkbox" checked class="rounded bg-gray-800 border-gray-700 text-primary focus:ring-0">
+            <span>Remember terminal session</span>
+          </label>
+          <a href="#" class="text-primary hover:underline">Forgot password?</a>
+        </div>
+        <button type="submit" class="w-full py-3.5 rounded-xl bg-primary hover:bg-teal-400 text-black font-black text-sm uppercase tracking-wider btn-primary-glow transition-all">
+          Enter Trader Portal
+        </button>
+      </form>
+
+      <!-- Signup Form -->
+      <form id="form-signup" onsubmit="handleAuthSubmit(event, 'signup')" class="space-y-4 hidden">
+        <div>
+          <label class="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1.5">Full Name</label>
+          <input type="text" placeholder="John Doe" class="w-full bg-gray-900 text-sm text-white rounded-xl px-4 py-2.5 border border-gray-700 focus:outline-none focus:border-primary">
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1.5">Email Address</label>
+          <input type="email" placeholder="trader@example.com" class="w-full bg-gray-900 text-sm text-white rounded-xl px-4 py-2.5 border border-gray-700 focus:outline-none focus:border-primary">
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1.5">Password</label>
+          <input type="password" placeholder="Create strong password" class="w-full bg-gray-900 text-sm text-white rounded-xl px-4 py-2.5 border border-gray-700 focus:outline-none focus:border-primary">
+        </div>
+        <button type="submit" class="w-full py-3.5 rounded-xl bg-primary hover:bg-teal-400 text-black font-black text-sm uppercase tracking-wider btn-primary-glow transition-all">
+          Join Paradigm Academy
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- 4. Platform Tour Video Modal -->
+  <div id="tour-modal" class="fixed inset-0 z-50 modal-backdrop hidden items-center justify-center p-4">
+    <div class="relative bg-[#0e1415] border border-gray-700/80 rounded-2xl max-w-3xl w-full shadow-2xl p-6">
+      <div class="flex items-center justify-between pb-4 border-b border-gray-800 mb-6">
+        <h3 class="text-xl font-bold text-white flex items-center gap-2">
+          <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
+          Paradigm Platform Walkthrough
+        </h3>
+        <button onclick="closeTourModal()" class="w-8 h-8 rounded-full bg-gray-800 text-gray-400 hover:text-white flex items-center justify-center">
+          ✕
+        </button>
+      </div>
+
+      <div class="relative aspect-video rounded-xl bg-black overflow-hidden border border-gray-800 mb-6 group">
+        <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=900&q=80" class="w-full h-full object-cover opacity-60">
+        <div class="absolute inset-0 flex flex-col items-center justify-center bg-black/40">
+          <div class="w-16 h-16 rounded-full bg-primary text-black flex items-center justify-center text-2xl shadow-[0_0_30px_rgba(38,217,177,0.8)]">
+            ▶
+          </div>
+          <span class="text-white font-bold text-sm mt-3">Interactive Overview (3 mins)</span>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-3 gap-4 text-center text-xs">
+        <div class="p-3 bg-gray-900 rounded-xl border border-gray-800">
+          <strong class="block text-primary text-sm mb-0.5">1. Academy</strong>
+          <span class="text-gray-400">Foundational to SMC Price Action</span>
+        </div>
+        <div class="p-3 bg-gray-900 rounded-xl border border-gray-800">
+          <strong class="block text-purple-400 text-sm mb-0.5">2. Live Desk</strong>
+          <span class="text-gray-400">London/NY live streams</span>
+        </div>
+        <div class="p-3 bg-gray-900 rounded-xl border border-gray-800">
+          <strong class="block text-emerald-400 text-sm mb-0.5">3. Signals</strong>
+          <span class="text-gray-400">Institutional setups with TP/SL</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5. Position Size Calculator Modal -->
+  <div id="calc-modal" class="fixed inset-0 z-50 modal-backdrop hidden items-center justify-center p-4">
+    <div class="relative bg-[#0e1415] border border-gray-700/80 rounded-2xl max-w-md w-full shadow-2xl p-6">
+      <div class="flex items-center justify-between pb-4 border-b border-gray-800 mb-6">
+        <h3 class="text-xl font-bold text-white flex items-center gap-2">
+          <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+          Position Size & Pip Calculator
+        </h3>
+        <button onclick="closeCalcModal()" class="w-8 h-8 rounded-full bg-gray-800 text-gray-400 hover:text-white flex items-center justify-center">
+          ✕
+        </button>
+      </div>
+
+      <div class="space-y-4">
+        <div>
+          <label class="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1.5">Account Balance ($)</label>
+          <input type="number" id="calc-balance" value="10000" class="w-full bg-gray-900 text-sm text-white rounded-xl px-4 py-2.5 border border-gray-700 focus:outline-none focus:border-primary font-mono">
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1.5">Risk Percentage (%)</label>
+          <input type="number" id="calc-risk" value="1.0" step="0.25" class="w-full bg-gray-900 text-sm text-white rounded-xl px-4 py-2.5 border border-gray-700 focus:outline-none focus:border-primary font-mono">
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1.5">Stop Loss Distance (Pips)</label>
+          <input type="number" id="calc-sl" value="30" class="w-full bg-gray-900 text-sm text-white rounded-xl px-4 py-2.5 border border-gray-700 focus:outline-none focus:border-primary font-mono">
+        </div>
+
+        <div class="p-4 rounded-xl bg-gray-900/90 border border-teal-500/30 font-mono space-y-2 mt-6">
+          <div class="flex justify-between text-xs">
+            <span class="text-gray-400">Total Money at Risk:</span>
+            <span id="calc-out-risk" class="text-rose-400 font-bold">$100.00</span>
+          </div>
+          <div class="flex justify-between text-xs">
+            <span class="text-gray-400">Recommended Lot Size:</span>
+            <span id="calc-out-lots" class="text-primary font-black text-sm">0.33 Lots</span>
+          </div>
+          <div class="flex justify-between text-xs">
+            <span class="text-gray-400">Target Profit Potential:</span>
+            <span id="calc-out-reward" class="text-emerald-400 font-bold">$200.00 (1:2 RR)</span>
+          </div>
+        </div>
+
+        <button onclick="closeCalcModal(); showToast('Position calculation confirmed.')" class="w-full py-3 rounded-xl bg-primary hover:bg-teal-400 text-black font-bold text-xs uppercase tracking-wider transition-all mt-4">
+          Apply to MT5 / cTrader
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 6. Checkout Modal -->
+  <div id="checkout-modal" class="fixed inset-0 z-50 modal-backdrop hidden items-center justify-center p-4">
+    <div class="relative bg-[#0e1415] border border-gray-700/80 rounded-2xl max-w-md w-full shadow-2xl p-6">
+      <div class="flex items-center justify-between pb-4 border-b border-gray-800 mb-6">
+        <div>
+          <h3 id="checkout-plan-name" class="text-xl font-bold text-white">Elite Tier Membership</h3>
+          <span id="checkout-plan-period" class="text-xs text-primary font-medium">billed monthly, cancel anytime</span>
+        </div>
+        <button onclick="closeCheckoutModal()" class="w-8 h-8 rounded-full bg-gray-800 text-gray-400 hover:text-white flex items-center justify-center">
+          ✕
+        </button>
+      </div>
+
+      <div class="text-center py-4 bg-gray-900/80 rounded-xl border border-gray-800 mb-6">
+        <span class="text-xs text-gray-400 block uppercase">Total Due Today</span>
+        <span id="checkout-plan-price" class="text-4xl font-black text-white font-mono">$199</span>
+      </div>
+
+      <form onsubmit="handleCheckoutSubmit(event)" class="space-y-4">
+        <div>
+          <label class="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1.5">Cardholder Name</label>
+          <input type="text" required value="Alex Vance" class="w-full bg-gray-900 text-sm text-white rounded-xl px-4 py-2.5 border border-gray-700 focus:outline-none focus:border-primary">
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1.5">Card Details</label>
+          <input type="text" required placeholder="4242 •••• •••• 4242" class="w-full bg-gray-900 text-sm text-white rounded-xl px-4 py-2.5 border border-gray-700 focus:outline-none focus:border-primary font-mono">
+        </div>
+        <div class="grid grid-cols-2 gap-3">
+          <input type="text" placeholder="MM/YY" value="12/28" class="bg-gray-900 text-sm text-white rounded-xl px-4 py-2.5 border border-gray-700 focus:outline-none focus:border-primary font-mono">
+          <input type="text" placeholder="CVC" value="888" class="bg-gray-900 text-sm text-white rounded-xl px-4 py-2.5 border border-gray-700 focus:outline-none focus:border-primary font-mono">
+        </div>
+
+        <button type="submit" class="w-full py-4 rounded-xl bg-primary hover:bg-teal-400 text-black font-black text-sm uppercase tracking-wider btn-primary-glow transition-all mt-4">
+          Authorize & Activate Membership
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- 7. Terminal Settings Modal -->
+  <div id="settings-modal" class="fixed inset-0 z-50 modal-backdrop hidden items-center justify-center p-4">
+    <div class="relative bg-[#0e1415] border border-gray-700/80 rounded-2xl max-w-md w-full shadow-2xl p-6">
+      <div class="flex items-center justify-between pb-4 border-b border-gray-800 mb-6">
+        <h3 class="text-xl font-bold text-white flex items-center gap-2">
+          <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+          </svg>
+          Terminal Settings
+        </h3>
+        <button onclick="closeSettingsModal()" class="w-8 h-8 rounded-full bg-gray-800 text-gray-400 hover:text-white flex items-center justify-center">
+          ✕
+        </button>
+      </div>
+
+      <div class="space-y-4 text-sm">
+        
+        <!-- Theme Mode -->
+        <div class="flex items-center justify-between p-3.5 rounded-xl bg-gray-900/80 border border-gray-800">
+          <div>
+            <h4 class="font-bold text-white text-xs uppercase tracking-wider">Appearance Theme</h4>
+            <p class="text-xs text-gray-400">Dark Terminal vs Light Pro Mode</p>
+          </div>
+          <button onclick="toggleTheme()" class="px-3.5 py-1.5 rounded-lg bg-primary/10 hover:bg-primary/20 text-primary border border-primary/30 text-xs font-bold transition-all">
+            Toggle Theme
+          </button>
+        </div>
+
+        <!-- WhatsApp VIP Group -->
+        <div class="flex items-center justify-between p-3.5 rounded-xl bg-emerald-500/10 border border-emerald-500/30">
+          <div>
+            <h4 class="font-bold text-white text-xs uppercase tracking-wider flex items-center gap-1.5 text-emerald-400">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 012.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 01-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.44.12-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.44.06-.66.31-.23.25-.88.86-.88 2.1s.9 2.43 1.03 2.6c.12.17 1.77 2.7 4.28 3.79.6.26 1.07.41 1.43.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.07-.12-.23-.19-.48-.31z"/></svg>
+              <span>VIP WhatsApp Group</span>
+            </h4>
+            <p class="text-xs text-gray-400">Live signals, setups & analysis</p>
+          </div>
+          <a href="https://chat.whatsapp.com/GDw1o17UF9VFSYQxqpvIKn" target="_blank" rel="noopener noreferrer" class="px-3.5 py-1.5 rounded-lg bg-[#25D366] hover:bg-[#20bd5a] text-white text-xs font-bold transition-all shadow-[0_0_12px_rgba(37,211,102,0.4)]">
+            Join Group
+          </a>
+        </div>
+
+        <!-- Audio Alert Preference -->
+        <div class="flex items-center justify-between p-3.5 rounded-xl bg-gray-900/80 border border-gray-800">
+          <div>
+            <h4 class="font-bold text-white text-xs uppercase tracking-wider">Audio Signal Alerts</h4>
+            <p class="text-xs text-gray-400">Audio chime on new trade entries</p>
+          </div>
+          <label class="relative inline-flex items-center cursor-pointer">
+            <input type="checkbox" checked onchange="showToast('Signal audio alert preferences saved!')" class="sr-only peer">
+            <div class="w-10 h-5 bg-gray-800 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary"></div>
+          </label>
+        </div>
+
+        <!-- Server Network -->
+        <div class="flex items-center justify-between p-3.5 rounded-xl bg-gray-900/80 border border-gray-800">
+          <div>
+            <h4 class="font-bold text-white text-xs uppercase tracking-wider">Broker Bridge Gateway</h4>
+            <p class="text-xs text-gray-400">Equinix LD4 / NY4 low-latency feed</p>
+          </div>
+          <span class="text-xs font-mono text-primary font-bold">12ms • OK</span>
+        </div>
+
+        <!-- Official Social Button -->
+        <div class="text-center pt-3 border-t border-gray-800">
+          <span class="text-xs text-gray-500 block mb-2">Official Community Handle</span>
+          <a href="https://chat.whatsapp.com/GDw1o17UF9VFSYQxqpvIKn" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-primary/10 hover:bg-primary/20 text-primary border border-primary/30 font-mono text-xs font-bold transition-all shadow-[0_0_15px_rgba(38,217,177,0.2)]">
+            <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+            <span>@paradigmtraders</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating WhatsApp VIP Group Button -->
+  <a href="https://chat.whatsapp.com/GDw1o17UF9VFSYQxqpvIKn" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 left-6 z-40 flex items-center gap-2.5 px-4 py-3 rounded-full bg-[#25D366] hover:bg-[#20bd5a] text-white font-extrabold text-xs tracking-wide shadow-[0_4px_25px_rgba(37,211,102,0.4)] hover:scale-105 transition-all group" title="Join Official Paradigm Traders WhatsApp">
+    <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+      <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 012.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 01-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.44.12-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.44.06-.66.31-.23.25-.88.86-.88 2.1s.9 2.43 1.03 2.6c.12.17 1.77 2.7 4.28 3.79.6.26 1.07.41 1.43.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.07-.12-.23-.19-.48-.31z"/>
+    </svg>
+    <span class="hidden sm:inline">WhatsApp Group</span>
+  </a>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container"></div>
+
+  <!-- Scripts -->
+  <script src="js/courses.js"></script>
+  <script src="js/signals.js"></script>
+  <script src="js/chart.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+</html>
